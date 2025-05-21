@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Pizza_Project
 {
-    public partial class Form1 : Form
+    public partial class frmMainForm : Form
     {
-        public Form1()
+        public frmMainForm()
         {
             InitializeComponent();
+        }
+
+        private void btnOrderNow_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
