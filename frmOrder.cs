@@ -24,213 +24,182 @@ namespace Pizza_Project
            
         }
 
-        enum enSizePrice
+        int GetSelectedSizePrice()
         {
-            eSmall = 50,
-            eMedium = 85,
-            eLarge = 130
+            if (rbSmall.Checked)
+                return Convert.ToInt32(rbSmall.Tag);
+            else if (rbMedium.Checked)
+                return Convert.ToInt32(rbMedium.Tag);
+            else if (rbLarge.Checked)
+                return Convert.ToInt32(rbLarge.Tag);
+            else
+                return 0;
         }
 
-        enum enToppingsPrice
+        int CalculateToppingsPrice()
         {
-            eExtraCheese = 10,
-            eMushrooms = 5,
-            eTomatoes = 5,
-            eOnions = 7,
-            eOlives = 15,
-            eGreenPapers = 10
+            int price = 0;
+
+            if (cbExtraCheese.Checked)
+                price += Convert.ToInt32(cbExtraCheese.Tag);
+            if (cbMushrooms.Checked)
+                price += Convert.ToInt32(cbMushrooms.Tag);
+            if (cbTomatoes.Checked)
+                price += Convert.ToInt32(cbTomatoes.Tag);
+            if (cbOnions.Checked)
+                price += Convert.ToInt32(cbOnions.Tag);
+            if (cbOlives.Checked)
+                price += Convert.ToInt32(cbOlives.Tag);
+            if (cbGreenPapers.Checked)
+                price += Convert.ToInt32(cbGreenPapers.Tag);
+
+
+            return price;
         }
 
-        enum enCrustPrice
+        int GetSelectedCrust()
         {
-            eThin = 20,
-            eThick = 40
+            if(rbThick.Checked)
+                return Convert.ToInt32(rbThick.Tag);    
+            else if (rbThin.Checked)
+                return Convert.ToInt32(rbThin.Tag);
+            else return 0;
         }
 
-        enum enWhereToEatPrice
+        int GetSelectedWhereToEat()
         {
-            eEatIn = 15,
-            eTakeOut = 0
+            if(rbEatIn.Checked)
+                return Convert.ToInt32(rbEatIn.Tag);   
+            else if (rbTakeOut.Checked)
+                return Convert.ToInt32( rbTakeOut.Tag);
+            else return 0; 
+        }
+       void UpdatePrice()
+        {
+            TotalPrice = CalculateToppingsPrice() + GetSelectedCrust() + GetSelectedWhereToEat() + GetSelectedSizePrice();
         }
         private void rbSmall_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbSmall.Checked)
-            {
-                TotalPrice += (int)enSizePrice.eSmall;
-            }
-            else if (!rbSmall.Checked)
-            {
-                TotalPrice -= (int)enSizePrice.eSmall;
-            }
-
+            UpdatePrice();
+            SelectedSize = "Small";
             LbMoney.Text = TotalPrice.ToString();
-            
         }
 
         private void rbMedium_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbMedium.Checked)
-            {
-                TotalPrice += (int)enSizePrice.eMedium;
-            }
-            else if (!rbMedium.Checked)
-            {
-                TotalPrice -= (int)enSizePrice.eMedium;
-            }
+            UpdatePrice();
+            SelectedSize = "Medium";
 
             LbMoney.Text = TotalPrice.ToString();
         }
         
         private void rbLarge_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbLarge.Checked)
-            {
-                TotalPrice += (int)enSizePrice.eLarge;
-            }
-            else if (!rbLarge.Checked)
-            {
-                TotalPrice -= (int)enSizePrice.eLarge;
-            }
+            UpdatePrice();
+            SelectedSize = "Large";
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
+        string GetSelectedToppings()
+        {
+            string Toppings = "";
+
+            if(cbExtraCheese.Checked)   
+                Toppings += "Extra Cheese, ";
+
+            if (cbMushrooms.Checked)
+                Toppings += "Mushrooms, ";
+
+            if (cbTomatoes.Checked)
+                Toppings += "Tomatoes, ";
+
+            if (cbOnions.Checked)
+                Toppings += "Onions, ";
+
+            if (cbOlives.Checked)
+                Toppings += "Olives, ";
+
+            if (cbGreenPapers.Checked)
+                Toppings += "Green Papers, ";
+
+            if (Toppings == "")
+                Toppings = "No Toppings  ";
+
+            return Toppings;    
+        }
+
         private void cbExtraCheese_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbExtraCheese.Checked)
-            {
-                TotalPrice += (int)enToppingsPrice.eExtraCheese;
-            }
-            else if (!cbExtraCheese.Checked)
-            {
-                TotalPrice -= (int)enToppingsPrice.eExtraCheese;
-            }
+            UpdatePrice();
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
         private void cbMushrooms_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbMushrooms.Checked)
-            {
-                TotalPrice += (int)enToppingsPrice.eMushrooms;
-            }
-            else if (!cbMushrooms.Checked)
-            {
-                TotalPrice -= (int)enToppingsPrice.eMushrooms;
-            }
+            UpdatePrice();
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
         private void cbTomatoes_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbTomatoes.Checked)
-            {
-                TotalPrice += (int)enToppingsPrice.eTomatoes;
-            }
-            else if (!cbTomatoes.Checked)
-            {
-                TotalPrice -= (int)enToppingsPrice.eTomatoes;
-            }
+            UpdatePrice();
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
         private void cbOnions_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbOnions.Checked)
-            {
-                TotalPrice += (int)enToppingsPrice.eOnions;
-            }
-            else if (!cbOnions.Checked)
-            {
-                TotalPrice -= (int)enToppingsPrice.eOnions;
-            }
+            UpdatePrice();
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
         private void cbOlives_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbOlives.Checked)
-            {
-                TotalPrice += (int)enToppingsPrice.eOlives;
-            }
-            else if (!cbOlives.Checked)
-            {
-                TotalPrice -= (int)enToppingsPrice.eOlives;
-            }
+            UpdatePrice();
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
         private void cbGreenPapers_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbGreenPapers.Checked)
-            {
-                TotalPrice += (int)enToppingsPrice.eGreenPapers;
-            }
-            else if (!cbGreenPapers.Checked)
-            {
-                TotalPrice -= (int)enToppingsPrice.eGreenPapers;
-            }
+            UpdatePrice();
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
         private void rbThin_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbThin.Checked)
-            {
-                TotalPrice += (int)enCrustPrice.eThin;
-            }
-            else if (!rbThin.Checked)
-            {
-                TotalPrice -= (int)enCrustPrice.eThin;
-            }
+            UpdatePrice();
+            SelectedCrust = "Thin";
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
         private void rbThick_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbThick.Checked)
-            {
-                TotalPrice += (int)enCrustPrice.eThick;
-            }
-            else if (!rbThick.Checked)
-            {
-                TotalPrice -= (int)enCrustPrice.eThick;
-            }
+            UpdatePrice();
+            SelectedCrust = "Thick";
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
         private void rbEatIn_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbEatIn.Checked)
-            {
-                TotalPrice += (int)enWhereToEatPrice.eEatIn;
-            }
-            else if (!rbEatIn.Checked)
-            {
-                TotalPrice -= (int)enWhereToEatPrice.eEatIn;
-            }
+            UpdatePrice();
+            SelectedWhereToEat = "Eat In";
 
             LbMoney.Text = TotalPrice.ToString();
         }
 
         private void rbTakeOut_CheckedChanged(object sender, EventArgs e)
         {
-            if (rbTakeOut.Checked)
-            {
-                TotalPrice += (int)enWhereToEatPrice.eTakeOut;
-            }
-            else if (!rbTakeOut.Checked)
-            {
-                TotalPrice -= (int)enWhereToEatPrice.eTakeOut;
-            }
+            UpdatePrice();
+            SelectedWhereToEat = "Take Out";
+
 
             LbMoney.Text = TotalPrice.ToString();
         }
@@ -260,63 +229,8 @@ namespace Pizza_Project
 
         private void btOrderNow_Click(object sender, EventArgs e)
         {
-            if (rbSmall.Checked)
-            {
-                SelectedSize = "Small";
-            }
-            else if (rbMedium.Checked)
-            {
-                SelectedSize = "Medium";
-            }
-            else if (rbLarge.Checked)
-            {
-                SelectedSize = "Large";
-            }
-
-            if (cbExtraCheese.Checked)
-            {
-                SelectedToppings += "Extra Cheese, ";
-            }
-            if (cbMushrooms.Checked)
-            {
-                SelectedToppings += "Mushrooms, ";
-            }
-            if (cbTomatoes.Checked)
-            {
-                SelectedToppings += "Tomatoes, ";
-            }
-            if (cbOnions.Checked)
-            {
-                SelectedToppings += "Onions, ";
-            }
-            if (cbOlives.Checked)
-            {
-                SelectedToppings += "Olives, ";
-            }
-            if (cbGreenPapers.Checked)
-            {
-                SelectedToppings += "GreenPapers, ";
-            }
-            
-
-            if(rbThick.Checked)
-            {
-                SelectedCrust = "Thick";
-            }
-            else if(rbThin.Checked)
-            {
-                SelectedCrust = "Thin";
-            }
-
-
-            if(rbEatIn.Checked)
-            {
-                SelectedWhereToEat = "Eat In";
-            }
-            else if(rbTakeOut.Checked)
-            {
-                SelectedWhereToEat = "Take Out";
-            }
+            SelectedToppings = GetSelectedToppings();
+            SelectedToppings = SelectedToppings.Substring(0, SelectedToppings.Length - 2).Trim();
 
             frmOrderSummary frm = new frmOrderSummary(SelectedSize, SelectedToppings, SelectedCrust,
                 SelectedWhereToEat, TotalPrice);

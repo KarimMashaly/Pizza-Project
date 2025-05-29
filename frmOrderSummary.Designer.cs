@@ -116,7 +116,7 @@
             this.LbSize.Size = new System.Drawing.Size(242, 46);
             this.LbSize.TabIndex = 6;
             this.LbSize.Text = " ";
-            this.LbSize.Click += new System.EventHandler(this.label1_Click);
+           
             // 
             // LbToppings
             // 
@@ -150,7 +150,7 @@
             this.LbWhereToEat.Size = new System.Drawing.Size(193, 40);
             this.LbWhereToEat.TabIndex = 9;
             this.LbWhereToEat.Text = " ";
-            this.LbWhereToEat.Click += new System.EventHandler(this.LbWhereToEat_Click);
+           
             // 
             // frmOrderSummary
             // 

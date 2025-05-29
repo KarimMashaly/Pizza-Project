@@ -66,6 +66,7 @@
             this.rbSmall.Name = "rbSmall";
             this.rbSmall.Size = new System.Drawing.Size(75, 26);
             this.rbSmall.TabIndex = 0;
+            this.rbSmall.Tag = "20";
             this.rbSmall.Text = "Small";
             this.rbSmall.UseVisualStyleBackColor = false;
             this.rbSmall.CheckedChanged += new System.EventHandler(this.rbSmall_CheckedChanged);
@@ -80,6 +81,7 @@
             this.rbLarge.Name = "rbLarge";
             this.rbLarge.Size = new System.Drawing.Size(77, 26);
             this.rbLarge.TabIndex = 1;
+            this.rbLarge.Tag = "100";
             this.rbLarge.Text = "Large";
             this.rbLarge.UseVisualStyleBackColor = false;
             this.rbLarge.CheckedChanged += new System.EventHandler(this.rbLarge_CheckedChanged);
@@ -94,6 +96,7 @@
             this.rbMedium.Name = "rbMedium";
             this.rbMedium.Size = new System.Drawing.Size(93, 26);
             this.rbMedium.TabIndex = 2;
+            this.rbMedium.Tag = "50";
             this.rbMedium.Text = "Medium";
             this.rbMedium.UseVisualStyleBackColor = false;
             this.rbMedium.CheckedChanged += new System.EventHandler(this.rbMedium_CheckedChanged);
@@ -140,6 +143,7 @@
             this.cbGreenPapers.Name = "cbGreenPapers";
             this.cbGreenPapers.Size = new System.Drawing.Size(135, 24);
             this.cbGreenPapers.TabIndex = 5;
+            this.cbGreenPapers.Tag = "5";
             this.cbGreenPapers.Text = "Green Papers";
             this.cbGreenPapers.UseVisualStyleBackColor = true;
             this.cbGreenPapers.CheckedChanged += new System.EventHandler(this.cbGreenPapers_CheckedChanged);
@@ -152,6 +156,7 @@
             this.cbOlives.Name = "cbOlives";
             this.cbOlives.Size = new System.Drawing.Size(78, 24);
             this.cbOlives.TabIndex = 4;
+            this.cbOlives.Tag = "10";
             this.cbOlives.Text = "Olives";
             this.cbOlives.UseVisualStyleBackColor = true;
             this.cbOlives.CheckedChanged += new System.EventHandler(this.cbOlives_CheckedChanged);
@@ -164,6 +169,7 @@
             this.cbOnions.Name = "cbOnions";
             this.cbOnions.Size = new System.Drawing.Size(84, 24);
             this.cbOnions.TabIndex = 3;
+            this.cbOnions.Tag = "5";
             this.cbOnions.Text = "Onions";
             this.cbOnions.UseVisualStyleBackColor = true;
             this.cbOnions.CheckedChanged += new System.EventHandler(this.cbOnions_CheckedChanged);
@@ -176,6 +182,7 @@
             this.cbTomatoes.Name = "cbTomatoes";
             this.cbTomatoes.Size = new System.Drawing.Size(105, 24);
             this.cbTomatoes.TabIndex = 2;
+            this.cbTomatoes.Tag = "5";
             this.cbTomatoes.Text = "Tomatoes";
             this.cbTomatoes.UseVisualStyleBackColor = true;
             this.cbTomatoes.CheckedChanged += new System.EventHandler(this.cbTomatoes_CheckedChanged);
@@ -188,6 +195,7 @@
             this.cbMushrooms.Name = "cbMushrooms";
             this.cbMushrooms.Size = new System.Drawing.Size(119, 24);
             this.cbMushrooms.TabIndex = 1;
+            this.cbMushrooms.Tag = "5";
             this.cbMushrooms.Text = "Mushrooms";
             this.cbMushrooms.UseVisualStyleBackColor = true;
             this.cbMushrooms.CheckedChanged += new System.EventHandler(this.cbMushrooms_CheckedChanged);
@@ -200,6 +208,7 @@
             this.cbExtraCheese.Name = "cbExtraCheese";
             this.cbExtraCheese.Size = new System.Drawing.Size(132, 24);
             this.cbExtraCheese.TabIndex = 0;
+            this.cbExtraCheese.Tag = "10";
             this.cbExtraCheese.Text = "Extra Cheese";
             this.cbExtraCheese.UseVisualStyleBackColor = true;
             this.cbExtraCheese.CheckedChanged += new System.EventHandler(this.cbExtraCheese_CheckedChanged);
@@ -227,6 +236,7 @@
             this.rbThick.Size = new System.Drawing.Size(70, 24);
             this.rbThick.TabIndex = 7;
             this.rbThick.TabStop = true;
+            this.rbThick.Tag = "20";
             this.rbThick.Text = "Thick";
             this.rbThick.UseVisualStyleBackColor = true;
             this.rbThick.CheckedChanged += new System.EventHandler(this.rbThick_CheckedChanged);
@@ -240,6 +250,7 @@
             this.rbThin.Size = new System.Drawing.Size(62, 24);
             this.rbThin.TabIndex = 6;
             this.rbThin.TabStop = true;
+            this.rbThin.Tag = "0";
             this.rbThin.Text = "Thin";
             this.rbThin.UseVisualStyleBackColor = true;
             this.rbThin.CheckedChanged += new System.EventHandler(this.rbThin_CheckedChanged);
@@ -266,6 +277,7 @@
             this.rbTakeOut.Size = new System.Drawing.Size(98, 24);
             this.rbTakeOut.TabIndex = 1;
             this.rbTakeOut.TabStop = true;
+            this.rbTakeOut.Tag = "0";
             this.rbTakeOut.Text = "Take Out";
             this.rbTakeOut.UseVisualStyleBackColor = true;
             this.rbTakeOut.CheckedChanged += new System.EventHandler(this.rbTakeOut_CheckedChanged);
@@ -278,6 +290,7 @@
             this.rbEatIn.Size = new System.Drawing.Size(73, 24);
             this.rbEatIn.TabIndex = 0;
             this.rbEatIn.TabStop = true;
+            this.rbEatIn.Tag = "15";
             this.rbEatIn.Text = "Eat In";
             this.rbEatIn.UseVisualStyleBackColor = true;
             this.rbEatIn.CheckedChanged += new System.EventHandler(this.rbEatIn_CheckedChanged);

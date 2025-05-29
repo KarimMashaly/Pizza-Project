@@ -24,14 +24,6 @@ namespace Pizza_Project
             LbTotalPrice.Text += TotalPrice; 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LbWhereToEat_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
