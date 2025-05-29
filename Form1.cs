@@ -19,7 +19,13 @@ namespace Pizza_Project
 
         private void btnOrderNow_Click(object sender, EventArgs e)
         {
-            
+            Form frm = new frmOrder();
+
+            frm.FormClosed += (s, args) => this.Show();
+            // To reload Form1 after closing Form2
+
+            frm.Show();
+            this.Hide();
         }
     }
 }

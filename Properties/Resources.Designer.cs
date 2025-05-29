@@ -63,6 +63,16 @@ namespace Pizza_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pepperoni_pizza_on_a_dark_background_top_view_with_copy_space_ai_generated_photo {
+            get {
+                object obj = ResourceManager.GetObject("pepperoni-pizza-on-a-dark-background-top-view-with-copy-space-ai-generated-photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pizza {
             get {
                 object obj = ResourceManager.GetObject("Pizza", resourceCulture);
