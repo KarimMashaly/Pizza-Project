@@ -117,14 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pepperoni-pizza-on-a-dark-background-top-view-with-copy-space-ai-generated-photo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pepperoni-pizza-on-a-dark-background-top-view-with-copy-space-ai-generated-photo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pizza.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="view-ready-eat-delicious-meal-go_23-2151431806" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\view-ready-eat-delicious-meal-go_23-2151431806.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

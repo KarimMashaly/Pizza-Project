@@ -13,6 +13,10 @@ namespace Pizza_Project
     public partial class frmOrder : Form
     {
         int TotalPrice;
+        string SelectedSize;
+        string SelectedToppings = "";
+        string SelectedCrust;
+        string SelectedWhereToEat;
         public frmOrder()
         {
             InitializeComponent();
@@ -252,6 +256,72 @@ namespace Pizza_Project
 
             TotalPrice = 0;
             LbMoney.Text = TotalPrice.ToString();
+        }
+
+        private void btOrderNow_Click(object sender, EventArgs e)
+        {
+            if (rbSmall.Checked)
+            {
+                SelectedSize = "Small";
+            }
+            else if (rbMedium.Checked)
+            {
+                SelectedSize = "Medium";
+            }
+            else if (rbLarge.Checked)
+            {
+                SelectedSize = "Large";
+            }
+
+            if (cbExtraCheese.Checked)
+            {
+                SelectedToppings += "Extra Cheese, ";
+            }
+            if (cbMushrooms.Checked)
+            {
+                SelectedToppings += "Mushrooms, ";
+            }
+            if (cbTomatoes.Checked)
+            {
+                SelectedToppings += "Tomatoes, ";
+            }
+            if (cbOnions.Checked)
+            {
+                SelectedToppings += "Onions, ";
+            }
+            if (cbOlives.Checked)
+            {
+                SelectedToppings += "Olives, ";
+            }
+            if (cbGreenPapers.Checked)
+            {
+                SelectedToppings += "GreenPapers, ";
+            }
+            
+
+            if(rbThick.Checked)
+            {
+                SelectedCrust = "Thick";
+            }
+            else if(rbThin.Checked)
+            {
+                SelectedCrust = "Thin";
+            }
+
+
+            if(rbEatIn.Checked)
+            {
+                SelectedWhereToEat = "Eat In";
+            }
+            else if(rbTakeOut.Checked)
+            {
+                SelectedWhereToEat = "Take Out";
+            }
+
+            frmOrderSummary frm = new frmOrderSummary(SelectedSize, SelectedToppings, SelectedCrust,
+                SelectedWhereToEat, TotalPrice);
+            frm.ShowDialog();
+
         }
     }
 }

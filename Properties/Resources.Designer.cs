@@ -79,5 +79,15 @@ namespace Pizza_Project.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap view_ready_eat_delicious_meal_go_23_2151431806 {
+            get {
+                object obj = ResourceManager.GetObject("view-ready-eat-delicious-meal-go_23-2151431806", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

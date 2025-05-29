@@ -49,6 +49,7 @@
             this.btOrderNow = new System.Windows.Forms.Button();
             this.LbTotalPriceText = new System.Windows.Forms.Label();
             this.LbMoney = new System.Windows.Forms.Label();
+            this.LbMakeYourPizza = new System.Windows.Forms.Label();
             this.gbSize.SuspendLayout();
             this.gbToppings.SuspendLayout();
             this.gbCrustType.SuspendLayout();
@@ -106,7 +107,7 @@
             this.gbSize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSize.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gbSize.Location = new System.Drawing.Point(61, 69);
+            this.gbSize.Location = new System.Drawing.Point(563, 135);
             this.gbSize.Name = "gbSize";
             this.gbSize.Size = new System.Drawing.Size(241, 158);
             this.gbSize.TabIndex = 3;
@@ -124,7 +125,7 @@
             this.gbToppings.Controls.Add(this.cbExtraCheese);
             this.gbToppings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbToppings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gbToppings.Location = new System.Drawing.Point(361, 69);
+            this.gbToppings.Location = new System.Drawing.Point(863, 135);
             this.gbToppings.Name = "gbToppings";
             this.gbToppings.Size = new System.Drawing.Size(324, 158);
             this.gbToppings.TabIndex = 4;
@@ -210,7 +211,7 @@
             this.gbCrustType.Controls.Add(this.rbThin);
             this.gbCrustType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCrustType.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gbCrustType.Location = new System.Drawing.Point(61, 307);
+            this.gbCrustType.Location = new System.Drawing.Point(563, 373);
             this.gbCrustType.Name = "gbCrustType";
             this.gbCrustType.Size = new System.Drawing.Size(241, 148);
             this.gbCrustType.TabIndex = 5;
@@ -250,7 +251,7 @@
             this.gbWhereToEat.Controls.Add(this.rbEatIn);
             this.gbWhereToEat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbWhereToEat.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gbWhereToEat.Location = new System.Drawing.Point(370, 307);
+            this.gbWhereToEat.Location = new System.Drawing.Point(872, 373);
             this.gbWhereToEat.Name = "gbWhereToEat";
             this.gbWhereToEat.Size = new System.Drawing.Size(315, 84);
             this.gbWhereToEat.TabIndex = 6;
@@ -287,7 +288,7 @@
             this.btResetForm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btResetForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btResetForm.ForeColor = System.Drawing.Color.Chocolate;
-            this.btResetForm.Location = new System.Drawing.Point(445, 655);
+            this.btResetForm.Location = new System.Drawing.Point(934, 652);
             this.btResetForm.Name = "btResetForm";
             this.btResetForm.Size = new System.Drawing.Size(253, 53);
             this.btResetForm.TabIndex = 7;
@@ -301,19 +302,20 @@
             this.btOrderNow.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btOrderNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btOrderNow.ForeColor = System.Drawing.Color.Chocolate;
-            this.btOrderNow.Location = new System.Drawing.Point(82, 655);
+            this.btOrderNow.Location = new System.Drawing.Point(563, 652);
             this.btOrderNow.Name = "btOrderNow";
             this.btOrderNow.Size = new System.Drawing.Size(253, 53);
             this.btOrderNow.TabIndex = 8;
             this.btOrderNow.Text = "Order Now";
             this.btOrderNow.UseVisualStyleBackColor = false;
+            this.btOrderNow.Click += new System.EventHandler(this.btOrderNow_Click);
             // 
             // LbTotalPriceText
             // 
             this.LbTotalPriceText.BackColor = System.Drawing.Color.Transparent;
             this.LbTotalPriceText.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbTotalPriceText.ForeColor = System.Drawing.Color.Red;
-            this.LbTotalPriceText.Location = new System.Drawing.Point(270, 569);
+            this.LbTotalPriceText.Location = new System.Drawing.Point(789, 566);
             this.LbTotalPriceText.Name = "LbTotalPriceText";
             this.LbTotalPriceText.Size = new System.Drawing.Size(171, 41);
             this.LbTotalPriceText.TabIndex = 9;
@@ -324,19 +326,31 @@
             this.LbMoney.BackColor = System.Drawing.Color.Transparent;
             this.LbMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbMoney.ForeColor = System.Drawing.Color.Red;
-            this.LbMoney.Location = new System.Drawing.Point(439, 569);
+            this.LbMoney.Location = new System.Drawing.Point(958, 566);
             this.LbMoney.Name = "LbMoney";
             this.LbMoney.Size = new System.Drawing.Size(127, 52);
             this.LbMoney.TabIndex = 10;
             this.LbMoney.Text = "0";
             // 
-            // Order
+            // LbMakeYourPizza
+            // 
+            this.LbMakeYourPizza.BackColor = System.Drawing.Color.Transparent;
+            this.LbMakeYourPizza.Font = new System.Drawing.Font("Stencil", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbMakeYourPizza.ForeColor = System.Drawing.Color.Chocolate;
+            this.LbMakeYourPizza.Location = new System.Drawing.Point(659, 33);
+            this.LbMakeYourPizza.Name = "LbMakeYourPizza";
+            this.LbMakeYourPizza.Size = new System.Drawing.Size(474, 80);
+            this.LbMakeYourPizza.TabIndex = 11;
+            this.LbMakeYourPizza.Text = "Make Your Pizza";
+            // 
+            // frmOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Pizza_Project.Properties.Resources.pepperoni_pizza_on_a_dark_background_top_view_with_copy_space_ai_generated_photo;
+            this.BackgroundImage = global::Pizza_Project.Properties.Resources.view_ready_eat_delicious_meal_go_23_2151431806;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1275, 748);
+            this.Controls.Add(this.LbMakeYourPizza);
             this.Controls.Add(this.LbMoney);
             this.Controls.Add(this.LbTotalPriceText);
             this.Controls.Add(this.btOrderNow);
@@ -345,7 +359,7 @@
             this.Controls.Add(this.gbCrustType);
             this.Controls.Add(this.gbToppings);
             this.Controls.Add(this.gbSize);
-            this.Name = "Order";
+            this.Name = "frmOrder";
             this.Text = "Order";
             this.gbSize.ResumeLayout(false);
             this.gbSize.PerformLayout();
@@ -361,26 +375,27 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton rbSmall;
-        private System.Windows.Forms.RadioButton rbLarge;
-        private System.Windows.Forms.RadioButton rbMedium;
+        protected System.Windows.Forms.RadioButton rbSmall;
+        protected System.Windows.Forms.RadioButton rbLarge;
+        protected System.Windows.Forms.RadioButton rbMedium;
         private System.Windows.Forms.GroupBox gbSize;
         private System.Windows.Forms.GroupBox gbToppings;
-        private System.Windows.Forms.CheckBox cbOnions;
-        private System.Windows.Forms.CheckBox cbTomatoes;
-        private System.Windows.Forms.CheckBox cbMushrooms;
-        private System.Windows.Forms.CheckBox cbExtraCheese;
-        private System.Windows.Forms.CheckBox cbGreenPapers;
-        private System.Windows.Forms.CheckBox cbOlives;
+        protected System.Windows.Forms.CheckBox cbOnions;
+        protected System.Windows.Forms.CheckBox cbTomatoes;
+        protected System.Windows.Forms.CheckBox cbMushrooms;
+        protected System.Windows.Forms.CheckBox cbExtraCheese;
+        protected System.Windows.Forms.CheckBox cbGreenPapers;
+        protected System.Windows.Forms.CheckBox cbOlives;
         private System.Windows.Forms.GroupBox gbCrustType;
-        private System.Windows.Forms.RadioButton rbThick;
-        private System.Windows.Forms.RadioButton rbThin;
+        protected System.Windows.Forms.RadioButton rbThick;
+        protected System.Windows.Forms.RadioButton rbThin;
         private System.Windows.Forms.GroupBox gbWhereToEat;
-        private System.Windows.Forms.RadioButton rbTakeOut;
-        private System.Windows.Forms.RadioButton rbEatIn;
+        protected System.Windows.Forms.RadioButton rbTakeOut;
+        protected System.Windows.Forms.RadioButton rbEatIn;
         private System.Windows.Forms.Button btResetForm;
         private System.Windows.Forms.Button btOrderNow;
         private System.Windows.Forms.Label LbTotalPriceText;
         private System.Windows.Forms.Label LbMoney;
+        private System.Windows.Forms.Label LbMakeYourPizza;
     }
 }

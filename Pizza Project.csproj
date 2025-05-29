@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOrderSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrderSummary.Designer.cs">
+      <DependentUpon>frmOrderSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderSummary.resx">
+      <DependentUpon>frmOrderSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOrder.resx">
       <DependentUpon>frmOrder.cs</DependentUpon>
@@ -94,6 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pepperoni-pizza-on-a-dark-background-top-view-with-copy-space-ai-generated-photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-ready-eat-delicious-meal-go_23-2151431806.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
